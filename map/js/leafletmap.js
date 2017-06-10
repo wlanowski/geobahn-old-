@@ -88,8 +88,8 @@ $.getJSON("../geodata/konvertiert/bst/bst.geojson", function(data) {
 //Marker
 
 var bueIcon = L.icon({
-    iconUrl: 'ico/bue.svg',
-    iconSize: [30, 30], // size of the icon
+    iconUrl: 'ico/bue.png',
+    iconSize: [30, 26], // size of the icon
 });
 
 var markers_dbnetz_bahnuebergang = L.markerClusterGroup();
@@ -153,23 +153,25 @@ $.getJSON("../geodata/konvertiert/tunnel/tunnel.geojson", function(data) {
     markers_dbnetz_tunnel.addLayer(geojson);
 });
 
+
+// Brücken
 var brueckIcon = L.icon({
-    iconUrl: 'ico/BSicon_BRÜCKE.svg',
-    iconSize: [30, 30], // size of the icon
+    iconUrl: 'ico/BSicon_BRUECKE.png',
+    iconSize: [26, 30], // size of the icon
 });
 
 
-// Brücken
 var markers_dbnetz_bruecken = L.markerClusterGroup();
 
-$.getJSON("../geodata/konvertiert/bruecken/bruecken.geojson", function(data) {
+$.getJSON("../geodata/konvertiert/bruecken-gross/bruecken-gross.geojson", function(data) {
     var geojson = L.geoJson(data, {
         onEachFeature: function(feature, layer) {
 
-            layer.setIcon(brueckIcon);
+            // layer.setIcon(brueckIcon);
 
             // ADD A POPUP WITH A CHART
-            layer.bindPopup("Strecke: <tab to=t1>" + feature.properties.streckennu + "<br>Bkm: <tab to=t1>" + feature.properties.km_l + "<br>Länge (m): <tab to=t1>" + feature.properties.laenge);
+            // ALT: 	layer.bindPopup("Strecke: <tab to=t1>" + feature.properties.streckennu + "<br>Bkm: <tab to=t1>" + feature.properties.km_l + "<br>Länge (m): <tab to=t1>" + feature.properties.laenge);
+           layer.bindPopup("Strecke: <tab to=t1>" + feature.properties.streckennu + "<br>Bkm: <tab to=t1>" + feature.properties.von_km_l + " bis " + feature.properties.bis_km_l + "<br>Länge (m): <tab to=t1>" + feature.properties.laenge);
         }
     });
     markers_dbnetz_bruecken.addLayer(geojson);
