@@ -11,8 +11,8 @@
 	$db_host = 'localhost';
 	$db_user = 'root';
 	$db_pass = '';
-	$db_name = 'tktestmap';
-	$db_pref = 'tktest';
+	$db_name = 'geobahndb';
+	$db_pref = 'geo';
 	
 	
 	// Zufälliger Salt-Key. Ändern!!!

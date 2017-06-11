@@ -99,6 +99,11 @@
         });
 
         TableManageButtons.init();
+		
+
+    } );
+		
+		
       });
     </script>
     <!-- /Datatables -->
