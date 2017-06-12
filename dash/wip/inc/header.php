@@ -55,7 +55,4 @@
 
 
   </head>
-  <?php
-   /*<body <?php echo $this->bodyclass; ?>>
-   */
-	?>
+

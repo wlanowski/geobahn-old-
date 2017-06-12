@@ -104,8 +104,7 @@
     } );
 		
 		
-      });
-    </script>
+  </script>
     <!-- /Datatables -->
 
 

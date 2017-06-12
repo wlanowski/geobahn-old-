@@ -59,7 +59,7 @@ function iframeLoaded() {
                // ? window.innerHeight
                // : document.documentElement.offsetHeight; 
 			
-			iFrameID.height = viewportheight -75;
+			iFrameID.height = viewportheight -150;
 			;
 			
 			/*
