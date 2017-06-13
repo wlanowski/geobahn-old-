@@ -137,6 +137,45 @@ echo '
                             </li>
 							';
 			break;
+			
+			
+		case 'kleinebruecken': // KLEINE BRÜCKE
+			echo '							
+							<li>
+                                <img src="img/bruecke.png" class="avatar" alt="Avatar">
+                                <div class="message_date">
+                                  <h3 class="date text-info">Bkm</h3>
+                                  <p class="month">' . $row['km_l'] . '</p>
+                                </div>
+                                <div class="message_wrapper">
+                                  <h4>Brückenbauwerk</h4>
+                                  Richtung:';
+			switch ($row['richtung'])
+				{
+			case 0:
+				echo 'Parallellaufend oder eingleisige Strecke';
+				break;
+
+			case 1:
+				echo 'Richtungsgleis';
+				break;
+
+			case 2:
+				echo 'Gegenrichtungsgleis';
+				break;
+
+			default:
+				echo 'k. A.';
+				}
+
+			echo '
+								  
+                                  <br />
+                                 Länge:' . $row['laenge'] . '
+                                </div>
+                            </li>
+							';
+			break;
 
 		case 'bst': // Betriebsstelle
 			echo '							
@@ -199,7 +238,7 @@ echo '
 							';
 			break;
 
-		case 'tunnel': // BRÜCKE
+		case 'tunnel': // Tunnel
 			echo '							
 							<li>
                                 <img src="img/tunnel.png" class="avatar" alt="Avatar">

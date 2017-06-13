@@ -182,6 +182,49 @@ $.getJSON("../geodata/konvertiert/bruecken-gross/bruecken-gross.geojson", functi
     markers_dbnetz_bruecken.addLayer(geojson);
 });
 
+
+// Kleine Brücken
+
+
+$.getJSON("../geodata/konvertiert/bruecken/bruecken.geojson", function(data) {
+    var geojson = L.geoJson(data, {
+        onEachFeature: function(feature, layer) {
+
+             layer.setIcon(brueckIcon);
+
+            // ADD A POPUP WITH A CHART
+            // ALT: 	layer.bindPopup("Strecke: <tab to=t1>" + feature.properties.streckennu + "<br>Bkm: <tab to=t1>" + feature.properties.km_l + "<br>Länge (m): <tab to=t1>" + feature.properties.laenge);
+           layer.bindPopup("Strecke: <tab to=t1>" + feature.properties.streckennu + "<br>Bkm: <tab to=t1>" + feature.properties.km_l + "<br>Länge (m): <tab to=t1>" + feature.properties.laenge);
+        }
+    });
+	
+	geojson.getAttribution = function() { return 'DB NETZ'; };
+	
+    markers_dbnetz_bruecken.addLayer(geojson);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Strecke
 var markers_dbnetz_strecke = L.markerClusterGroup();
 
@@ -237,7 +280,7 @@ var groupedoverlays = {
 var mymap = L.map('mapid', {
     center: [51.679, 9.866],
     zoom: 6,
-    layers: [base_TPM, ORM_empty, markers_dbnetz_empty]
+    layers: [base_cartolight, ORM_empty, markers_dbnetz_empty]
 });
 
 var options = {
