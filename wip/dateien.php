@@ -63,7 +63,7 @@ require_once (__DIR__ . '/inc/layout.php');
 			<br />
 			
 			<h4>Brücken</h4>
-			In der Originalversion nur punktuelle Informationen in der Excel-Tabelle<br />
+			In der Originalversion nur punktuelle Informationen bestimmter Bauwerke in der Excel-Tabelle<br />
 			<a class="btn btn-success" href="../geodata/geliefert/geo-bruecken/bruecken.xlsx"><i class="fa fa-file-excel-o"></i> Excel</a>
 			<a class="btn btn-primary" href="../geodata/geliefert/geo-bruecken/Datenstruktur_Bruecken_Excel.pdf"><i class="fa fa-file-pdf-o"></i> Datenstruktur</a>
 			<br />
@@ -79,13 +79,12 @@ require_once (__DIR__ . '/inc/layout.php');
 
 			
 			<h4>Tunnel</h4>
-			Zu den Tunneln wurden keine Exceltabellen veröffentlicht. Mithilfe von OpenOffice und Microsoft Excel wurde die im dBASE-Format gelieferte Datenbank zu Excel konvertiert.<br />
+			Zu den Tunneln wurden keine Exceltabellen veröffentlicht. Mit Hilfe von OpenOffice und Microsoft Excel wurde die im dBASE-Format gelieferte Datenbank zu Excel konvertiert.<br />
 			<a class="btn btn-success" href="../geodata/konvertiert/tunnel/tunnel_polyline.xlsx"><i class="fa fa-file-excel-o"></i> Excel</a>
 			
 			<h4>SQL-Dateien</h4>
 			Zur Auswertung der Geodaten wurden diese in eine MySQL-Datenbank überführt. Die exportierten Datenbanken stehen hier als SQL-Dateien zur Verfügung.<br />
-			<a class="btn btn-success" href="../geodata/sql/einzeln_only.sql"><i class="fa fa-file-code-o"></i> Getrennte Tabellen nach Art</a><br />
-			<a class="btn btn-success" href="../geodata/sql/zusasammen_only.sql"><i class="fa fa-file-code-o"></i> Zusammengeführt in einer Tabelle</a>
+			<a class="btn btn-success" href="../geodata/sql/zusammengeführt.sql"><i class="fa fa-file-code-o"></i> SQL</a><br />
 			
 			<h4>Kilometer und weitere Formate</h4>
 			Auf eine Bearbeitung der Kilometerdaten wurde verzichtet. Weitere Formate können auf Anfrage erstellt und geschickt werden.
